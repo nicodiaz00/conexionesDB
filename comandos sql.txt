@@ -1,0 +1,18 @@
+-- leer datos
+-- palabra reservada para leer datos es Select
+
+--Select * From TIPOSEDICION
+Select * From DISCOS
+
+--Select aliasDisco.Titulo, aliasDisco.FechaLanzamiento, aliasEstilo.Descripcion From DISCOS aliasDisco, ESTILOS aliasEstilo where aliasDisco.Id = aliasEstilo.Id
+
+--escribir datos podemos usar insert into DISCOS(Titulo,FechaLanzamiento,CantidadCanciones,UrlImagenTapa,IdEstilo,IdTipoEdicion) values(debemos colocar los datos respetando el orden de las columnas)
+
+--insert into DISCOS (Titulo,FechaLanzamiento,CantidadCanciones,UrlImagenTapa,IdEstilo,IdTipoEdicion) values ('limp bizkit',GETDATE(),12,'urlimagen',2,1)
+
+--ACTUALIZAR palabra reservada Update
+
+Update ESTILOS set Descripcion = 'Cumbia' where id =2 --en este caso actualiamos el estilo de la tabla descripcion cuando el id sea 2, sino where y el id nos modificaria todos los elementos que componeon la tabla.
+
+-- eliminar datos  delete from "nombre de la tabla" where iD= "aca ponemos el id del elemento" usamos el condicional para que no elimine todos los datos.
+
